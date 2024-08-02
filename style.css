@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lilita+One&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Archivo', sans-serif;
+}
+/* BARRA SCROLL */
+body::-webkit-scrollbar {
+    width: 8px; 
+}
+body::-webkit-scrollbar-track {
+    background: #284fb2;  
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #0f1f469d;    
+    border-radius: 20px;        
+}
+/* BARRA MENU */
+.barraMenu{
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    background-color: #284fb2a1;
+}
+.logoBarraMenu{
+    display: flex;
+    flex-direction: row;
+    padding: 0 15px;
+    font-family: 'Lilita One', sans-serif;
+    color: white;
+    align-items: center;
+}
+#tydyBarraMenu{
+    font-size: 38px;
+    margin: 0;
+    padding: 0 5px;
+}
+.itensBarraMenu{
+    display: flex;
+    flex-direction: row;
+    padding: 0 15px;
+}
+.itensBarraMenu a{
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+}
+/* PRIMEIRO MODULO */
+.primeiroModulo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 56px solid #284fb2a1;
+    background: linear-gradient(-45deg, #1943ad, #5b96d8, #11447e);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+    padding: 60px 0 75px;
+}
+.logoGrande{
+    font-family: 'Lilita One', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logoGrande h1{
+    font-size: 120px;
+    margin: 0;
+}
+.logoGrande img{
+    height: 200px;
+}
+.barraDivisoria{
+    width: 45vw;
+    border: 3px solid #e97265;
+}
+.detalhesLista{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 0 0 ;
+    margin-bottom: 40px;
+}
+.detalhesLista p {
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+#precoTag{
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0;
+}
+.primeiroModulo button{
+    background: linear-gradient(-45deg, #b9493d, #cc5e52, #FA8072);
+    color: white;
+    letter-spacing: 5px;
+    font-size: 16px;
+    font-weight: 900;
+    border: none;
+    border-radius: 15px;
+    height: 60px;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    animation: wiggle 3s linear infinite;
+    transition: all 1s;
+}
+.primeiroModulo button:hover{
+    animation: none;
+    transform: scale(1.2);
+    transition: all 1s;
+}
+@keyframes gradient{
+    0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+}
+@keyframes wiggle{
+    0%, 10% {
+        transform: rotate(0);
+    }
+    15%{
+        transform: rotate(-15deg);
+    }
+    20%{
+        transform: rotate(10deg);
+    }
+    25%{
+        transform: rotate(-10deg);
+    }
+    30%{
+        transform: rotate(10deg);
+    }
+    35%{
+        transform: rotate(-10deg);
+    }
+    40%, 100%{
+        transform: rotate(0);
+    }
+}
+/* SEGUNDO MODULO */
+.segundoModulo{
+    width: 100%;
+    color: white;
+    background: #304fa7;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.opcoesPlanos{
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    gap: 50px;
+}
+.planoResidencial, .planoEmpresarial, .planoEspecial{
+    background: linear-gradient(0deg, #11447e, #082546);
+    height: 450px;
+    width: 350px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: all 0.8s;
+}
+.segundoModulo button{
+    background: linear-gradient(-45deg, #b9493d, #cc5e52, #FA8072);
+    color: white;
+    letter-spacing: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    height: 50px;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.textoOferta{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 6px;
+}
+.textoOferta p {
+    margin: 0;
+    padding: 5px 0 0 0 ;
+}
+#precoFora{
+    text-decoration: line-through;
+    margin: 0;
+    align-content: center;
+}
+#precoNovo{
+    font-size: 36px;
+    font-family: 'Lilita One';
+    margin: 0;
+    align-content: center;
+}
+.segundoModulo button:hover{
+    background: linear-gradient(-45deg, #8f2e23, #c44436, #eb6e60);
+}
+.planoResidencial:hover, .planoEmpresarial:hover, .planoEspecial:hover{
+    transform:scale(1.2);
+    transition: transform 0.8s ease-in-out;
+
+}
+.textoPlanos{
+    height: 200px;
+}
+/* TERCEIRO MÓDULO */
+.terceiroModulo{
+    background: #5b96d8;
+}
+.terceiroModulo h1{
+    margin: 0;
+    padding: 30px 0 0;
+    text-align: center;
+    color: white;
+    height: 80px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background: linear-gradient(0deg,#0d3461, #184c88, #5b96d8);
+    padding: 0 0 80px;
+}
+.cardExemplo{
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    display: flex;
+}
+#card01{
+    background-image: url('images/imagem_contato.png');   
+}
+#card02{
+    background-image: url('images/imagem_card01.png'); 
+}
+#card03{
+    background-image: url('images/iamgem_card02.png'); 
+}
+#card04{
+    background-image: url('images/imagem_contato.png'); 
+}
+[id*="card0"]{
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 25px;
+}
+[id*="card0"]:hover{
+    cursor: pointer;
+    background-image: none !important;
+    background: #082546;
+    transition: transform 0.8s ease-in-out;
+}
+.hide{
+    display: none;
+    color: white;
+    width: 350px;
+    text-align: center;
+    padding: 20px;
+    word-break: break;
+}
+[id*="card0"]:hover > .hide{
+    display: block;
+}
+/* FOOTER */
+.footer{
+    background: #082546;
+    width: 100%;
+    align-content: center;
+    padding: 8px 0;
+}
+.footerInfo p{
+    margin: 0;
+    color: rgba(255, 255, 255, 0.63);
+    text-align: center;
+    font-size: 12px;
+}
+.mediaLinks{
+    text-align: center;
+}
+.mediaLinks img{
+    width: 25px;
+    padding: 10px;
+}
+/* TELAS MENORES */
+@media (min-width: 950px) and (max-width: 1400px){
+    .opcoesPlanos{
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        gap: 20px;
+    }
+    .planoResidencial, .planoEmpresarial, .planoEspecial{
+        background: linear-gradient(0deg, #11447e, #082546);
+        display: grid;
+        grid-template-columns: 2fr, 1fr;
+        grid-template-areas: "area1 area2" ;
+        height: 350px;
+        width: 90vw;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 24px;
+    }
+    .planoResidencial:hover, .planoEmpresarial:hover, .planoEspecial:hover{
+        transform: none;
+    }
+    .textoPlanos p{
+        width: 40vw;
+        padding: 10px 0;
+    }
+    #area1 {
+        width: 30vw;
+        padding: 0 2vw;
+    }
+    .segundoModulo button{
+        letter-spacing: 5px;
+        font-size: 16px;
+        font-weight: 900;
+        height: 70px;
+        width: 30vw;
+    }
+    #precoNovo{
+        font-size: 48px;
+    }
+    #precoTag{
+        font-size: 62px;
+    }
+    #esconder{
+        display: none !important;
+    }
+    .pagContato{
+        align-items: center !important;
+    }
+    .pagContato{
+        flex-direction: column-reverse;
+    }
+    .trabalheconosco{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+ /* TELAS MENORES */
+ @media (min-width: 600px) and (max-width: 949px){
+    .opcoesPlanos{
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        gap: 20px;
+    }
+    .planoResidencial, .planoEmpresarial, .planoEspecial{
+        height: 450px;
+        width: 90vw;
+        text-align: center;
+        align-items: center !important;
+        font-size: 24px;
+    }
+    .planoResidencial:hover, .planoEmpresarial:hover, .planoEspecial:hover{
+        transform: none;
+    }
+    .segundoModulo button{
+        font-size: 18px;
+        font-weight: 900;
+        height: 75px;
+        width: 70vw;
+    }
+    #area1 h2{
+        grid-area: primeiro;
+        font-size: 35px;
+        margin: 50px 0 0 0;
+    }
+    #textoOferta{
+        grid-area: segundo;
+    }
+    #area1{
+        display: grid;
+        grid-template-columns: 50vw, 40vw;
+        grid-template-areas: 'primeiro segundo' 'primeiro segundo';
+        height: 120px;
+    }
+    #pDoPreco{
+        align-content: end !important;
+    }
+    #precoNovo{
+        align-content: end;
+        font-size: 45px;
+    }
+    #precoFora{
+        align-content: end;
+    }
+    #esconder{
+        display: none !important;
+    }
+    .pagContato{
+        flex-direction: column-reverse;
+    }
+    .trabalheconosco{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+ }
+ /* TELAS MOBILE */
+ @media (max-width: 599px){
+    #esconder{
+        display: none !important;
+    }
+    .opcoesPlanos{
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        gap: 20px;
+    }
+    .planoResidencial, .planoEmpresarial, .planoEspecial{
+        height: 560px;
+        width: 90vw;
+        text-align: center;
+        align-items: center !important;
+        border-radius: 10px;
+        font-size: 24px;
+    }
+    .planoResidencial:hover, .planoEmpresarial:hover, .planoEspecial:hover{
+        transform: none;
+    }
+    .segundoModulo button{
+        font-size: 14px;
+        font-weight: 800;
+        height: 75px;
+        width: 70vw;
+    }
+    #area1 h2{
+        grid-area: primeiro;
+        font-size: 35px;
+        margin: 50px 0 0 0;
+    }
+    #textoOferta{
+        grid-area: segundo;
+    }
+    #area1{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: 'primeiro' 'segundo';
+        height: 220px;
+    }
+    #pDoPreco{
+        align-content: end !important;
+    }
+    #precoNovo{
+        align-content: end;
+        font-size: 45px;
+    }
+    #precoFora{
+        align-content: end;
+    }
+    .planoResidencial p, .planoEmpresarial p, .planoEspecial p{
+        font-size: 20px;
+    }
+    .opcoesTitulo h1{
+        text-align: center;
+    }
+    #precoTag{
+        font-size: 48px;
+    }
+    .primeiroModulo button{
+        font-weight: 800;
+    }
+    .primeiroModulo{
+        padding: 35px 0 75px;
+    }
+    #tydyBarraMenu{
+        display: none !important;
+    }
+    .logoBarraMenu{
+        padding: 0 0 0 5px;
+    }
+    .itensBarraMenu{
+        padding: 0 5px 0 0;
+    }
+    .itensBarraMenu a{
+        padding: 15px 5px;
+        font-size: 16px;
+    }
+    .footer{
+        background: #0d3461;
+    }
+    .pagContato{
+        flex-direction: column-reverse;
+    }
+    .trabalheconosco{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+ }
+ /* PAGINA SERVIÇOS */
+ .servicosBlocos{
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
+    column-gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 5px;
+ }
+ .blocoServico img{
+    width: 300px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    object-fit: contain;
+ }
+.blocoServico{
+    background-color: #11447e;
+    border-radius: 15px;
+    color: white;
+    max-width: 400px;
+    min-width: 300px;
+    text-align: center;
+}
+.blocoServico h2{
+    color: white;
+    text-shadow: 0 3px #012152;
+}
+.textoBloco p{
+    text-align: justify;
+    font-size: 14px;
+    margin: 15px;
+    margin-bottom: 30px;
+    text-shadow: 0 2px rgba(22, 8, 8, 0.925) ;
+}
+ /* PAGINA CONTATO */
+.imagemContato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagemContato img{
+    width: 40vw;
+    min-width: 280px;
+}
+.pagContato{
+    display: flex;
+    gap: 5vw;
+}
+.formContato h1{
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 900;
+    text-shadow: 0 4px #082546;
+}
+.formContato p{
+    color: #022b68;
+    font-weight: 600;
+    text-align: center;
+    font-size: 14px;
+}
+.formContato{
+    border: 5px solid #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 30vw;
+    min-width: 250px;
+    text-align: center;
+}
+.formContato form{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    gap: 20px;
+}
+.formContato form input{
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+}
+#mensagem{
+    height: 80px;
+}
+.formContato button{
+    background: #072f5cc9 !important;
+    animation: none;
+    width: 250px !important;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.formContato form ::placeholder{
+    color: #022b68;
+    font-family: 'Archivo', sans-serif;
+    font-size: 14px;
+}
+/* PAGINA TRABALHE CONOSCO */
+.trabalheconosco h1{
+    font-family: 'Lilita One', sans-serif;
+    text-transform: uppercase;
+    font-size: 36px;
+}
+.trabalheconosco img{
+    max-width: 50vw;
+}
+input[type='file'] {
+    display: none
+}
+label{
+    background-color: #09326e;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    padding: 6px 20px
+}
+.trabalheconosco{
+    gap: 2vw;
+    color: white;
+    text-align: center;
+    text-shadow: 0 2px #012152;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 'imagem texto1' 'imagem texto2' 'imagem texto3' 'imagem texto4';
+}
+#imgTrabalhe{
+    grid-area: imagem;
+}
+#textTrabalhe1{
+    grid-area: texto1;
+}
+#textTrabalhe2{
+    grid-area: texto2;
+    max-width: 40vw;
+    min-width: 300px;
+}
+#textTrabalhe3{
+    grid-area: texto3;
+}
+#textTrabalhe4{
+    grid-area: texto4;
+}
